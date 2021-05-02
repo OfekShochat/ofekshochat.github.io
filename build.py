@@ -1,6 +1,9 @@
 from sys import argv
 from glob import glob
 import os
+import subprocess
+
+FNULL = open(os.devnull, 'w')
 
 outputDir = "./docs/{}"
 styleName = argv[1]
@@ -13,4 +16,4 @@ files = glob("writings/*.md")
 files += glob("writings/**/*.md")
 for f in files:
   print(f)
-  os.system(makecmd(f))
+  subprocess.check_call(makecmd(f), stdout=FNULL, stderr=FNULL)
