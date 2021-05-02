@@ -5,15 +5,20 @@ import subprocess
 
 FNULL = open(os.devnull, 'w')
 
-outputDir = "./docs/{}"
+outputDir = "./static/{}"
 styleName = argv[1]
 ARGS =  "pandoc -c css/{}.css -s {} -t html -o {}"
 
-def makecmd(f):
-  return ARGS.format(styleName, f, outputDir.format(f[f.find("\\" if os.name == "nt" else "/"):f.find(".")+1] + "html"))
+for i in glob("static/*.html"):
+  os.remove(i)
 
-files = glob("writings/*.md")
-files += glob("writings/**/*.md")
+def makecmd(f):
+  return ARGS.format(styleName, f, outputDir.format(f[f.find("\\" if os.name == "nt" else "/")+1:f.find(".")+1] + "html"))
+
+files = glob("source/*.md")
+files += glob("source/**/*.md")
 for f in files:
+  cmd = makecmd(f)
   print(f)
-  subprocess.check_call(makecmd(f), stdout=FNULL, stderr=FNULL)
+  print(" - {}".format(cmd))
+  subprocess.check_call(cmd, stdout=FNULL, stderr=FNULL)
