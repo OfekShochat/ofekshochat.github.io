@@ -2,7 +2,7 @@ from sys import argv
 from glob import glob
 import os
 
-outputDir = "./static/{}"
+outputDir = "./gh-pages/{}"
 styleName = argv[1]
 ARGS =  "c:\\Users\\o\\AppData\\Local\\Pandoc\\pandoc.exe -c ./writings/css/{}.css -s {} -t html -o {} --metadata title=\"{}\""
 
