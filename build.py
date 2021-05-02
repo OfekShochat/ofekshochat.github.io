@@ -7,7 +7,7 @@ FNULL = open(os.devnull, 'w')
 
 outputDir = "./docs/{}"
 styleName = argv[1]
-ARGS =  "c:\\Users\\o\\AppData\\Local\\Pandoc\\pandoc.exe -c css/{}.css -s {} -t html -o {}"
+ARGS =  "pandoc -c css/{}.css -s {} -t html -o {}"
 
 def makecmd(f):
   return ARGS.format(styleName, f, outputDir.format(f[f.find("\\" if os.name == "nt" else "/"):f.find(".")+1] + "html"))
