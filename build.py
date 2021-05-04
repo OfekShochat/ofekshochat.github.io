@@ -21,4 +21,4 @@ for f in files:
   cmd = makecmd(f)
   print(f)
   print(" - {}".format(cmd))
-  subprocess.check_call(cmd, stdout=FNULL, stderr=FNULL)
+  subprocess.check_call(cmd, stdout=FNULL, stderr=FNULL, shell=True)
