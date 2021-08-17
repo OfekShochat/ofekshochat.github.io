@@ -1,4 +1,4 @@
-/* taken from the amazing https://gist.github.com/ZachSaucier/8295d9dc926d7064ff0d4f3f04b35b55 */
+/* a slightly modified version of the amazing https://gist.github.com/ZachSaucier/8295d9dc926d7064ff0d4f3f04b35b55 */
 
 @import 'https://fonts.googleapis.com/css?family=Open+Sans';
 
@@ -13,6 +13,7 @@ body {
 	font-size: 16px;
 	background-color: #222;
 	color: #aaa;
+	text-align: center;
 }
 
 .simple-container {
@@ -40,20 +41,17 @@ body {
 }
 
 p {
-	font-size: 16px;
-	text-align: center;
+	font-size: 20px;
 }
 
 h1 {
 	font-size: 30px;
 	line-height: 34px;
-	text-align: center;
 }
 
 h2 {
 	font-size: 20px;
 	line-height: 25px;
-	text-align: center;
 }
 
 h3 {
@@ -63,7 +61,6 @@ h3 {
 	padding-bottom: 15px;
 	border-bottom: 1px solid #D8D8D8;
 	border-top: 1px solid #D8D8D8;
-	text-align: center;
 }
 
 hr {
