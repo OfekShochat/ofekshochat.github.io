@@ -9,7 +9,7 @@ outputDir = "./static/{}"
 styleName = argv[1]
 PANDOC_PATH = "C:\\Users\\o\\AppData\\Roaming\\npm\\node_modules\\pandoc-bin\\vendor\\pandoc.exe"
 
-ARGS =  PANDOC_PATH + " -c css/{}.css -s {} -t html -o {}"
+ARGS =  "pandoc" + " -c css/{}.css -s {} -t html -o {}"
 
 for i in glob("static/*.html"):
   os.remove(i)
