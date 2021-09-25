@@ -1,1 +1,1 @@
-python3 build.py mvp
+python3 build.py dark
